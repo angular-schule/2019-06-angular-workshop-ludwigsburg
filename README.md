@@ -39,7 +39,7 @@ Sollte es Probleme mit dem Proxy geben, melde Dich bitte bei uns, dann finden wi
 Die Angular CLI ist das offizielle Build-Tool für Angular. Mit folgendem Befehl kannst Du die CLI installieren:
 
 ```
-npm install -g @angular/cli@next
+npm install -g @angular/cli
 ```
 
 Überprüfe bitte anschließend die Versionen, damit wir beim Workshop alle auf dem gleichen Stand sind.
