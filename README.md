@@ -16,7 +16,7 @@ Die gesamte Installation wird rund 30 Minuten dauern.
 
 ## Benötigte Software
 
-1. **Node.js 10.9** oder höher: [https://nodejs.org](https://nodejs.org)
+1. **Node.js 12** oder höher: [https://nodejs.org](https://nodejs.org)
    + Mac-Benutzer bitte Homebrew verwenden! ([siehe Anleitung](https://presentations.angular.schule/HOMEBREW_NODE))
 2. **Google Chrome:** [https://www.google.com/chrome/](https://www.google.com/chrome/)
    + **[Angular Augury](https://chrome.google.com/webstore/detail/augury/elgalmkoelokbchhkhacckoklkejnhcd)** (Chrome Extension)
@@ -45,13 +45,13 @@ npm install -g @angular/cli
 Überprüfe bitte anschließend die Versionen, damit wir beim Workshop alle auf dem gleichen Stand sind.
 ```
 node -v
-> Erwartet: v10.9.x oder höher
+> Erwartet: v12.x oder höher
 
 npm -v
 > Erwartet: 6.x oder höher
 
 ng version
-> Erwartet: 7.x ODER 8.0.0
+> Erwartet: 8.0.0 oder höher
 ```
 
 
