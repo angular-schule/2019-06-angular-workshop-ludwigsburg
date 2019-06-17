@@ -1,8 +1,5 @@
-var Test = /** @class */ (function () {
-    function Test(id) {
-        console.log('Hallo Ludwigsburg 😀', id);
-    }
-    return Test;
-}());
-var test = new Test(42);
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var test_1 = require("./test");
+var test = new test_1.Test(42);
 //# sourceMappingURL=index.js.map
