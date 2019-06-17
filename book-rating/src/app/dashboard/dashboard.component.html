@@ -1,9 +1,11 @@
 <div
 
-  *ngFor="let b of books; odd as odd"
-  [ngClass]="{ grayBackground: odd }">
+  *ngFor="let b of books; odd as o"
+  [ngClass]="{ grayBackground: o }">
 
   <br-book
     [book]="b">
   </br-book>
 </div>
+
+<button class="btn btn-primary">Knopf</button>
