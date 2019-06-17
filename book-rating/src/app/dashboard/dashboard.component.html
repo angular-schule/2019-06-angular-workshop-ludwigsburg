@@ -1,4 +1,9 @@
-<br-book
-  *ngFor="let b of books"
-  [book]="b"
-></br-book>
+<div
+
+  *ngFor="let b of books; odd as odd"
+  [ngClass]="{ grayBackground: odd }">
+
+  <br-book
+    [book]="b">
+  </br-book>
+</div>
