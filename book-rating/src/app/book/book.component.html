@@ -5,7 +5,7 @@
     <div class="card-title">
       <h2>
         {{ book.title }}
-        <ng-container *ngFor="let s of getStars()">⭐️</ng-container>
+        <ng-container *brRepeat="book.rating">⭐️</ng-container>
       </h2>
     </div>
     <p>{{ book.description }}</p>
