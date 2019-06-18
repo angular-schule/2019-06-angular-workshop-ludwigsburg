@@ -8,4 +8,10 @@
   </br-book>
 </div>
 
-<button class="btn btn-primary">Knopf</button>
+<p [ngPlural]="books.length">
+  <ng-template ngPluralCase="=0">Es gibt keine Bücher</ng-template>
+  <ng-template ngPluralCase="=1">Es gibt ein Buch</ng-template>
+  <ng-template ngPluralCase="other">Anzahl der Bücher: {{ books.length }}</ng-template>
+</p>
+
+
