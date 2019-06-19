@@ -55,4 +55,8 @@ export class DashboardComponent implements OnInit {
       .sort((a, b) => b.rating - a.rating);
   }
 
+  doCreateBook(newBook: Book) {
+    this.books = [...this.books, newBook];
+  }
+
 }
