@@ -1,7 +1,3 @@
-<br-create-book
-  (createBook)="doCreateBook($event)"
-  ></br-create-book>
-
 <div
 
   *ngFor="let b of books; odd as o"
@@ -21,4 +17,8 @@
   <ng-template ngPluralCase="other">Anzahl der Bücher: {{ books.length }}</ng-template>
 </p>
 
+<button mat-fab class="fab"
+  (click)="showCreateBook()">
+  <mat-icon>add</mat-icon>
+</button>
 

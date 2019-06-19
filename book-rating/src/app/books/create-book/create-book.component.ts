@@ -1,6 +1,7 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Book } from '../shared/book';
+import { MatBottomSheetRef } from '@angular/material';
 
 @Component({
   selector: 'br-create-book',
@@ -9,7 +10,9 @@ import { Book } from '../shared/book';
 })
 export class CreateBookComponent {
 
-  @Output() createBook = new EventEmitter<Book>();
+  constructor(private bottomSheetRef:
+    MatBottomSheetRef<CreateBookComponent>) {
+  }
 
   booksForm = new FormGroup({
     isbn: new FormControl('', [
@@ -33,7 +36,7 @@ export class CreateBookComponent {
       rating: 1
     };
 
-    this.createBook.emit(newBook);
+    this.bottomSheetRef.dismiss(newBook);
     this.booksForm.reset();
   }
 }

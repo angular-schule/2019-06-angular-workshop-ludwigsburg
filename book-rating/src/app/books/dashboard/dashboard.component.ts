@@ -1,18 +1,21 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { Book } from '../shared/book';
 import { BookRatingService } from '../shared/book-rating.service';
+import { MatBottomSheet } from '@angular/material';
+import { CreateBookComponent } from '../create-book/create-book.component';
 
 @Component({
   selector: 'br-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  // changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DashboardComponent implements OnInit {
 
   books: Book[];
 
-  constructor(private br: BookRatingService) {
+  constructor(private br: BookRatingService,
+              private bottomSheet: MatBottomSheet) {
   }
 
   ngOnInit() {
@@ -57,6 +60,16 @@ export class DashboardComponent implements OnInit {
 
   doCreateBook(newBook: Book) {
     this.books = [...this.books, newBook];
+  }
+
+  showCreateBook() {
+    const ref = this.bottomSheet.open(CreateBookComponent);
+    ref.afterDismissed()
+      .subscribe(newBook => {
+        if (newBook) {
+          this.doCreateBook(newBook);
+        }
+      });
   }
 
 }
