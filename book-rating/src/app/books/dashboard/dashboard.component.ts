@@ -3,6 +3,7 @@ import { Book } from '../shared/book';
 import { BookRatingService } from '../shared/book-rating.service';
 import { MatBottomSheet } from '@angular/material';
 import { CreateBookComponent } from '../create-book/create-book.component';
+import { BookStoreService } from '../book-store.service';
 
 @Component({
   selector: 'br-dashboard',
@@ -12,33 +13,16 @@ import { CreateBookComponent } from '../create-book/create-book.component';
 })
 export class DashboardComponent implements OnInit {
 
-  books: Book[];
+  books: Book[] = [];
 
   constructor(private br: BookRatingService,
-              private bottomSheet: MatBottomSheet) {
+              private bottomSheet: MatBottomSheet,
+              private bt: BookStoreService) {
   }
 
   ngOnInit() {
-    this.books = [
-      {
-        isbn: '111',
-        title: 'Angular',
-        description: 'Grundlagen...',
-        rating: 5
-      },
-      {
-        isbn: '222',
-        title: 'AngularJS',
-        description: 'Einführung...',
-        rating: 3
-      },
-      {
-        isbn: '333',
-        title: 'Vue.js',
-        description: 'Tolles Buch, aber zu spät geliefert',
-        rating: 1
-      }
-    ];
+    this.bt.getAll()
+      .subscribe(books => this.books = books);
   }
 
   doRateUp(book: Book) {
