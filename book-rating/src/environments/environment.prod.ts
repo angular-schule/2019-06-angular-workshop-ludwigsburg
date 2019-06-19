@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  myBackend: 'https://api.angular.schule'
+
 };

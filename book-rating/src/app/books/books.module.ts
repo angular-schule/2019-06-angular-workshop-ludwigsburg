@@ -8,13 +8,15 @@ import { BookComponent } from './book/book.component';
 import { RepeatDirective } from './shared/repeat.directive';
 import { CreateBookComponent } from './create-book/create-book.component';
 import { MatButtonModule, MatIconModule, MatBottomSheetModule } from '@angular/material';
+import { BookDetailsComponent } from './book-details/book-details.component';
 
 @NgModule({
   declarations: [
     DashboardComponent,
     BookComponent,
     RepeatDirective,
-    CreateBookComponent
+    CreateBookComponent,
+    BookDetailsComponent
   ],
   imports: [
     CommonModule,
