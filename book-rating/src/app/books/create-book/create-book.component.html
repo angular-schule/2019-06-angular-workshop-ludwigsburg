@@ -1,0 +1,27 @@
+<form [formGroup]="booksForm">
+
+  <div class="form-group">
+    <label for="isbn">ISBN</label>
+    <input type="text" class="form-control" id="isbn">
+  </div>
+
+  <div class="feedback-red" *ngIf="false">
+    Please enter a valid ISBN!
+  </div>
+
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" class="form-control" id="title">
+  </div>
+
+  <div class="form-group">
+    <label for="description">Description</label>
+    <textarea type="text" class="form-control" id="description"></textarea>
+  </div>
+
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary">Create</button>
+  </div>
+
+
+</form>
