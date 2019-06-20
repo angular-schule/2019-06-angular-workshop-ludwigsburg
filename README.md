@@ -11,6 +11,9 @@ Merke dir schon einmal dieses Repository.
 Hier wird während des Workshops stets der Quelltext unserer Beispielanwendung verfügbar sein.
 > **https://github.com/angular-schule/2019-06-angular-workshop-ludwigsburg**
 
+## ☞ [Download rxjs-playground-node](https://github.com/angular-schule/2019-06-angular-workshop-ludwigsburg/files/3312238/rxjs-playground-node.zip)
+
+
 Damit wir gleich durchstarten können, solltest Du ein paar Vorbereitungen treffen.  
 Die gesamte Installation wird rund 30 Minuten dauern. 
 
