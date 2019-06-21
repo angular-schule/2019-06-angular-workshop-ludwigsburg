@@ -5,15 +5,10 @@ let dataArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 from(dataArray)
   .pipe(
-    map(x => x * 10) // Operator
+    map(x => x * 5),
+    filter(x => x > 5),
+    filter(x => x % 2 === 0),
+    reduce((x,y) => x + y),
+    map(summe => '💩'.repeat(summe))
   ).subscribe(console.log)
 
-
-// Hands on!
-
-// 1. multipliziere alle Zahlen mit 5
-// 2. sortiere alle Werte aus, die kleiner sind als 15
-// 3. sortiere alle Werte aus, die ungerade sind
-// 4. gib nur die Summe dieser Zahlen aus (ein Datensatz)
-
-// 5. optional: gib genau so viele Smilies aus, wie die Summe lautet
