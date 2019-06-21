@@ -8,4 +8,6 @@ const subscription = simpleTimer$.subscribe(
 
 /******************************/
 
-// TODO: Unsubscribe after timeout
+// später in Angular: immer async nutzen! das "unsubscribed" für euch
+setTimeout(() => subscription.unsubscribe(), 3000);
+
