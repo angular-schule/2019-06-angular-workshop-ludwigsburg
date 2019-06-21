@@ -14,7 +14,7 @@ import { of, Observable } from 'rxjs';
 export class BookDetailsComponent implements OnInit {
 
   book$: Observable<Book>;
-  isOpen: false
+  isOpen: false;
 
   constructor(private route: ActivatedRoute, private bs: BookStoreService) { }
 
@@ -31,7 +31,7 @@ export class BookDetailsComponent implements OnInit {
             firstThumbnailUrl: ''
           })))
         ),
-        share()
+        // share()
       );
   }
 
