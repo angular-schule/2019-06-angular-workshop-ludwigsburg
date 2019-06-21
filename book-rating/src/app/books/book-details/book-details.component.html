@@ -1,7 +1,13 @@
-<h1>Buch #{{ isbn }}</h1>
+<h1>Buch #{{ (book$ | async) ?.isbn }}</h1>
 
-<p>
-  book-details works!
+<button
+  (click)="isOpen = !isOpen"
+  class="btn btn-secondary">Details</button>
+
+<p *ngIf="isOpen">
+  {{ (book$ | async) ?.description }}
+  {{ (book$ | async) ?.rating }}
 </p>
 
-<a routerLink="/book/9781788620703">Gehe zu Buch 9781788620703</a>
+<a routerLink="/book/9781788620703">Gehe zu Buch 9781788620703</a><br>
+<a routerLink="/book/222">Gehe zu Buch 222</a>
