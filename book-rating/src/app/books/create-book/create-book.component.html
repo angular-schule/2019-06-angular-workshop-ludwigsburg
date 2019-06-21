@@ -1,29 +1,25 @@
-<form [formGroup]="booksForm" (ngSubmit)="submitForm()">
+<form [formGroup]="booksForm" class="mb-4" (ngSubmit)="submitForm()">
 
-  <div class="form-group">
-    <label for="isbn">ISBN</label>
-    <input formControlName="isbn" type="text" class="form-control" id="isbn">
+  <mat-form-field>
+    <input matInput placeholder="ISBN" formControlName="isbn" />
+    <mat-error *ngIf="!isValid('isbn')">
+      ISBN ist ungültig.
+    </mat-error>
+  </mat-form-field>
 
-    <div class="feedback-red" *ngIf="!isValid('isbn')">
-      Please enter a valid ISBN!
-    </div>
-  </div>
+  <mat-form-field>
+    <input matInput placeholder="Titel" formControlName="title" />
+  </mat-form-field>
 
-  <div class="form-group">
-    <label for="title">Title</label>
-    <input formControlName="title" type="text" class="form-control" id="title">
-  </div>
+  <mat-form-field>
+    <textarea matInput placeholder="Beschreibung" formControlName="description"></textarea>
+  </mat-form-field>
 
-  <div class="form-group">
-    <label for="description">Description</label>
-    <textarea formControlName="description" class="form-control" id="description"></textarea>
-  </div>
-
-  <div class="form-group">
-    <button
-      [disabled]="booksForm.invalid"
-      type="submit" class="btn btn-primary">Create</button>
-  </div>
-
+  <button
+    type="submit"
+    [disabled]="booksForm.invalid"
+    mat-raised-button
+    color="primary"
+  >Abschicken</button>
 
 </form>

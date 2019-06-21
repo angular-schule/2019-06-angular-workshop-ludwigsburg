@@ -7,7 +7,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { BookComponent } from './book/book.component';
 import { RepeatDirective } from './shared/repeat.directive';
 import { CreateBookComponent } from './create-book/create-book.component';
-import { MatButtonModule, MatIconModule, MatBottomSheetModule } from '@angular/material';
+import { MatButtonModule, MatIconModule, MatBottomSheetModule, MatCardModule, MatInputModule } from '@angular/material';
 import { BookDetailsComponent } from './book-details/book-details.component';
 
 @NgModule({
@@ -24,7 +24,9 @@ import { BookDetailsComponent } from './book-details/book-details.component';
     ReactiveFormsModule,
     MatIconModule,
     MatButtonModule,
-    MatBottomSheetModule
+    MatBottomSheetModule,
+    MatCardModule,
+    MatInputModule
   ],
   exports: [
     DashboardComponent
