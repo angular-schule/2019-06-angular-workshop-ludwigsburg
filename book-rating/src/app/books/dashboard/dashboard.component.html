@@ -1,6 +1,6 @@
 <div
 
-  *ngFor="let b of books; odd as o"
+  *ngFor="let b of (books$ | async); odd as o"
   [ngClass]="{ grayBackground: o }">
 
   <br-book
@@ -11,10 +11,14 @@
   </br-book>
 </div>
 
-<p [ngPlural]="books.length">
+<h2 *ngIf="loading$ | async">Lade Bücher...</h2>
+
+<p [ngPlural]="(books$ | async).length">
   <ng-template ngPluralCase="=0">Es gibt keine Bücher</ng-template>
   <ng-template ngPluralCase="=1">Es gibt ein Buch</ng-template>
-  <ng-template ngPluralCase="other">Anzahl der Bücher: {{ books.length }}</ng-template>
+  <ng-template ngPluralCase="other">
+    Anzahl der Bücher: {{ (books$ | async).length }}
+  </ng-template>
 </p>
 
 <button mat-fab class="fab"
